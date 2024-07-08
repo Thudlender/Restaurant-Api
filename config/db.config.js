@@ -1,8 +1,8 @@
 require("dotenv").config();
 
 module.exports = {
-  HOST: "default",
-  USER: "ep-nameless-haze-a49cw95m-pooler.us-east-1.aws.neon.tech",
+  HOST: "ep-nameless-haze-a49cw95m-pooler.us-east-1.aws.neon.tech",
+  USER: "default",
   PASSWORD: "wkPyB0hYnag4",
   DB: "verceldb",
   dialect: "postgres",
