@@ -4,13 +4,16 @@
   "description": "This is a RESTful api for a Grap restaurant project.",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon index.js",
-    "start":"node index.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tinnapaht Chindarat",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3"
   }
 }
