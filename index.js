@@ -8,11 +8,11 @@ const role = db.Role;
 const authRouter = require("./routers/auth.router")
 
 //Dev mode
-/*db.sequelize.sync({force:true}).then(()=>{
-    initRole();
-    console.log("Drop and Sync DB")
-})
-*/
+// db.sequelize.sync({force:true}).then(()=>{
+//     initRole();
+//     console.log("Drop and Sync DB")
+// })
+
 
 const initRole = () => {
     role.create({ id: 1, name: "user"});

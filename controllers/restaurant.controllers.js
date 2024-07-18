@@ -114,8 +114,8 @@ exports.getAll = async (req, res) => {
             .catch((error) => {
                 res.status(500).send({
                   message:
-                    error.message ||
-                    "Something error occured while creating the reataurant. ",
+                    error.message || 
+                    "Something error occured while while registering a new user. ",
                 });
             });
     };
