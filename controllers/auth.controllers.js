@@ -20,7 +20,7 @@ exports.signup = async (req, res) => {
     const newUser = {
       username: username,
       email: email,
-      UserPassword: bcrypt.hashSync(password, 21),
+      UserPassword: bcrypt.hashSync(password, 11),
     };
 
     //Save user in the database
@@ -86,7 +86,7 @@ exports.signin = async (req, res) => {
         const authorities = [];
         user.getRoles().then((roles)=>{
             for(let i = 0; i < roles.length; i++){
-                authorities.push("ROLES_"+ roles[i].name.toUppercase());
+                authorities.push("ROLES_"+ roles[i].roleName.toUppercase());
             }
             res.status(200).send({
                 id:user.id,

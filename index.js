@@ -15,9 +15,9 @@ const authRouter = require("./routers/auth.router")
 
 
 const initRole = () => {
-    role.create({ id: 1, name: "user"});
-    role.create({ id: 2, name: "moderator" });
-    role.create({ id: 3, name: "admin" });
+    role.create({ id: 1, roleName: "user"});
+    role.create({ id: 2, roleName: "moderator" });
+    role.create({ id: 3, roleName: "admin" });
 };
 
 //use middleware
