@@ -18,9 +18,9 @@ exports.signup = async (req, res) => {
 
     //Prepare user data
     const newUser = {
-        username:username,
-        email:email,
-        password:bcrypt.hashSync(password, 21),
+      username: username,
+      email: email,
+      UserPassword: bcrypt.hashSync(password, 21),
     };
 
     //Save user in the database
@@ -71,7 +71,7 @@ exports.signin = async (req, res) => {
         if (!user) {
             return res.status(404).send({ message: "User not found." });
         }
-        const passwordIsValid = bcrypt.compareSync(password, user.password)
+        const passwordIsValid = bcrypt.compareSync(password, user.UserPassword);
         if(!passwordIsValid) {
             return res.status(401).send({
                 accessToken: null,
