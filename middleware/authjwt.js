@@ -2,7 +2,6 @@
  const jwt = require("jsonwebtoken");
  const config = require("../config/auth.config");
  const db = require("../models");
-const { request } = require("express");
  const User = db.User;
 
  //verify token
@@ -75,6 +74,7 @@ isModOrAdmin = (req, res, next) => {
 
 
 const authJwt = {
-    verifyToken,
+    verifytoken,
+    isModOrAdmin, isAdmin, isMod
 };
 module.exports = authJwt;
